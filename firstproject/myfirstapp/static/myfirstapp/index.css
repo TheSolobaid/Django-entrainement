@@ -3,15 +3,36 @@
     font-family: "Roboto", sans-serif;
     margin: 0;
     text-align: center;
+    color: aliceblue;
 }
 nav{
     display: flex;
 }
 nav a{  
-    background-color: #a0c318;
+    background-color: royalblue;
     margin-right: 10px;
     margin-left: 10px;
-    flex-basis: calc(100% / 3 - 60px);
+    flex-basis: calc(100% / 2 - 60px);
     padding: 5px;
     border-radius: 25px;
+}
+html{
+    background-color: black;
+}
+h1{
+    margin-top: 50px;
+}
+form{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+div{
+    width: 40%;
+}
+
+.I1{
+    color: black;
+    background-color: white;
 }

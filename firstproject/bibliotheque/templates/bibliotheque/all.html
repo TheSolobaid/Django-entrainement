@@ -1,0 +1,15 @@
+<!-- all.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tous les livres</title>
+</head>
+<body>
+    <h1>Liste de tous les livres</h1>
+    <ul>
+        {% for livre in livres %}
+        <li>{{ livre }}</li> 
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -32,14 +32,16 @@ du fichierdonc extends "myfirstapp/main.html" -->
 {% endblock %}
 {% block content %}
 <!-- les champs de formulaires -->
-    <form action="/myfirstapp/bonjour" method="get">
-    {% csrf_token %}
-        <label for="nom"> Nom :</label>
-        <input type="text" name="nom"/>
-        <label for="prenom"> Prénom :</label>
-        <input type="text" name="prenom"/>
-        <label for="age"> Age :</label>
-        <input type="text" name="age"/>
-        <input type="submit" value="envoyer"/>
-    </form>
+    <div>
+        <form action="/myfirstapp/bonjour" method="get">
+        {% csrf_token %}
+            <label for="nom"> Nom :</label>
+            <input type="text" name="nom"/>
+            <label for="prenom"> Prénom :</label>
+            <input type="text" name="prenom"/>
+            <label for="age"> Age :</label>
+            <input type="text" name="age"/>
+            <input type="submit" value="envoyer" class = I1 />
+        </form>
+    </div>
 {% endblock %}
