@@ -22,10 +22,3 @@ def traitement(request):
     else:
         return render(request,"bibliotheque/ajout.html",{"form": lform})
     
-def all(request):
-    livres = models.Livre.objects.all()
-    context = {'livres': livres}
-    return render(request, 'bibliotheque/all.html', context)
-
-def affiche(request):
-    return render(request,"bibliotheque/affiche.html")

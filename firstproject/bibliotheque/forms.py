@@ -13,3 +13,4 @@ class LivreForm(ModelForm):
             'nombre_pages' : _('nombresde pages'),
             'resume' : _('Résumé')
         }
+    
