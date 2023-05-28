@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{%static 'bibliotheque/index.css'%}">
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <nav>
+            <a href="/bibliotheque/ajout">ajouter un livre</a>
+            <a href="/bibliotheque/">lister les livre</a>
+        </nav>
+        <ol>
+            {% for l in liste %}
+                <li>{{l}} date de parrution {{l.date_parution | date:"d/m/Y"}}
+                    <a href = "/bibliotheque/affiche/{{l.id}}/">afficher les détails</a>
+                    <a href = "/bibliotheque/delete/{{l.id}}/">effacer</a>
+                    <a href="/bibliotheque/update/{{l.id}}/">mise a jour du livre</a>
+                </li>
+            {% endfor %}
+        </ol>
+    </body>

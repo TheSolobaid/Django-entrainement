@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        {% load static %}
+        <link rel="stylesheet" href="{%static 'bibliotheque/index.css'%}">  
         <meta charset="UTF-8">
         <title>ajout d'un livre</title>
     </head>
     <body>
-        <p> vous avez ajouté le livre suivant {{livre}} {{livre.id}} </p>
+        <nav>
+            <a href="/bibliotheque/ajout">ajouter un livre</a>
+            <a href="/bibliotheque/">lister les livre</a>
+        </nav>
+        <div class="d1">
+        <h1> {{livre.titre}}</h1>
+        <p>Ce livre est écrit par {{livre.auteur}} est paru le {{livre.date_parution|date:"d/m/Y"}}</p>
+        <P>résumé:</P>
+        <p>{{livre.resume}}</p>
+        </div>
     </body>
 </html>

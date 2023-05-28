@@ -12,12 +12,10 @@
             <a href="/bibliotheque/ajout">ajouter un livre</a>
             <a href="/bibliotheque/">lister les livre</a>
         </nav>
-        <div class="d2">
-        <form method="post" action="/bibliotheque/traitement/">
+        <form method="post" action="/bibliotheque/traitementupdate/{{livre.id}}/">
             {% csrf_token %}
-            {{ form.as_ul }} <!-- permet d'afficher tous les champs sous forme d'une liste -->
-            <input classe="send" type="submit" value="envoyer les données"\>
+            {{ form.as_ul }}
+            <input type="submit" value="envoyer les données"\>
         </form>
-        </div>
     </body>
 </html>
