@@ -8,5 +8,5 @@ urlpatterns = [
     path('affiche/<int:id>/', views.affiche),
     path('delete/<int:id>/', views.delete),
     path('update/<int:id>/', views.update),
-    path('traitementupdate/<int:>/', views.traitementupdate),
+    path('traitementupdate/<int:id>/', views.traitementupdate),
 ]

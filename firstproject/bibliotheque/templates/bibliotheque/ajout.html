@@ -15,7 +15,7 @@
         <div class="d2">
         <form method="post" action="/bibliotheque/traitement/">
             {% csrf_token %}
-            {{ form.as_ul }} <!-- permet d'afficher tous les champs sous forme d'une liste -->
+            {{ form.as_p  }} <!-- permet d'afficher tous les champs sous forme d'une liste -->
             <input classe="send" type="submit" value="envoyer les données"\>
         </form>
         </div>
