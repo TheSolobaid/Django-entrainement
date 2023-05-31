@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{%static 'relation/main_view.css'%}">
+        <title>{% block title %} acceuil {% endblock %} </title>
+    </head>
+    <body>
+        <div class = "div1">
+        <header>
+            <a href="/relation/">Home</a>
+            <a href="/relation/voiture/">Voiture</a>
+            <a href="/relation/marque/">Marque</a>
+        </header>
+        <h1> bienvenue sur un site de voiture </h1>
+        </div>
+        <div class = acc>
+            <p>Vous trouverais dans l'onglet voiture une liste de toutes les voiture recensé dans notre base de donnée</p>
+            <p>L'onglet marque lui vous montrera toutes les marque que nous connaissons</p>
+        </div>
+    </body>
+</html>

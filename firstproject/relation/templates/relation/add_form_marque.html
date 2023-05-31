@@ -1,0 +1,11 @@
+{% extends "main_add.html"%}
+
+{%block title%}formulaire de marque{%endblock%}
+
+{%block form%}
+<form method="post" action="/relation/traitement/2/">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="send" type="submit" value="terminer">
+</form>
+{%endblock%}

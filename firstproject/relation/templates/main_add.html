@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{%static 'relation/main_add.css'%}">
+        <title>{%block title%}Site de voiture {%endblock%}</title>
+    </head>
+    <body>
+        <header>
+        
+                <a href="/relation/">Home</a>
+                <a href="/relation/voiture">Voiture</a>
+                <a href="/relation/marque/">Marque</a>
+        </header>
+    <div class="d1">
+    {%block form%}
+    <h1>ici le formulaire</h1>
+    {%endblock%}
+        </div>
+    </body>
+</html>

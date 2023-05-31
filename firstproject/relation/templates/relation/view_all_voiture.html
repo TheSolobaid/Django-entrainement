@@ -1,0 +1,22 @@
+{% extends "main_voiture.html"%}
+
+{%block title%} les models connus {%endblock%}
+
+    {%block ajout%}
+            <a class = "a1" href="/relation/add_voiture/">ajouter un model de voiture à la base de donnée</a>
+    {%endblock%}
+
+    {%block list%}
+    {% if not liste %}
+    <h1>Cette base de donnée est vide, veuillez la remplire en appuillant sur "ajouter un model de voiture à la base de donnée"</h1>
+    {% endif %}
+        <div class = "d2">
+        {% for i in liste %}
+        <li class="list">la {{i.nom}} de la marque {{i.marque}}
+            <a class="deta" href="/relation/view_auto/{{i.id}}/">Afficher les détails</a>
+            <a class = "supp" href = "/relation/delete_auto/{{i.id}}/">effacer</a>
+            <a class = "up" href="/relation/update_auto/{{i.id}}/">mise a jour</a>
+        </li>
+        {% endfor %}      
+        </div>  
+    {%endblock%}

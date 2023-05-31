@@ -1,0 +1,9 @@
+{% extends "main_add.html"%}
+{%block title%}formulaire de voiture {%endblock%}
+{%block form%}
+<form method="post" action="/relation/traitement/1/">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input class="send" type="submit" value="terminer">
+        </form>
+    {%endblock%}

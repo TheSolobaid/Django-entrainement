@@ -1,0 +1,23 @@
+{% extends "main_voiture.html"%}
+
+{%block title%} Nos marques partenaires {%endblock%}
+
+    {%block ajout%}
+            <a class="a1" href="/relation/add_marque/">ajouter une marque à la base de donnée</a>
+    {%endblock%}
+
+    {%block list%}
+    {% if not liste %}
+        <h1>Cette base de donnée est vide, veuillez la remplire en appuyant sur "ajouter une marque à la base de donnée"</h1>
+    {% else %}
+    <div class = "d2">
+    {% for i in liste %}
+    <li class="list"> {{i.nom}} originaire du pays: {{i.pays}}
+        <a class="deta" href="/relation/view_marque/{{i.id}}/">Afficher les détails</a>
+        <a class="supp" href = "/relation/delete_marque/{{i.id}}/">Effacer</a>
+        <a class="up" href="/relation/update_marque/{{i.id}}/">Mise a jour</a>
+    </li>
+    {% endfor %} 
+    </div>
+    {%endif%}
+    {%endblock%}

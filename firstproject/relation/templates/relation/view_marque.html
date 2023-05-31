@@ -1,0 +1,8 @@
+{% extends "main_view.html"%}
+
+{% block title%} {{marque.nom}} {%endblock%}
+{%block affiche%}
+<H1>Le  marque : {{marque.nom}}</H1>
+    <p> Cette a été créé par {{marque.createur}}</p>
+    <P> Elle est orriginaire de {{marque.pays}}.</P>
+{%endblock%}    
