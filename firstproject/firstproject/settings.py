@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'myfirstapp.apps.MyfirstappConfig',
     'bibliotheque.apps.BibliothequeConfig',
     'relation.apps.RelationConfig'
+
 ]
 
 MIDDLEWARE = [

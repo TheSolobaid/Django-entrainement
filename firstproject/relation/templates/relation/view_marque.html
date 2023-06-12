@@ -2,7 +2,15 @@
 
 {% block title%} {{marque.nom}} {%endblock%}
 {%block affiche%}
+<div class="marque">
 <H1>Le  marque : {{marque.nom}}</H1>
     <p> Cette a été créé par {{marque.createur}}</p>
     <P> Elle est orriginaire de {{marque.pays}}.</P>
+    {% for auto in autos %}
+        <li><a href="/relation/view_auto/{{auto.id}}/">{{ auto.nom }}</a></li>
+        
+    {% empty %}
+        <p>aucune voiture n'est recencée pour cette marque</p>
+    {% endfor %}
+</div>
 {%endblock%}    

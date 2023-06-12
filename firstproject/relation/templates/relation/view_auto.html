@@ -2,7 +2,9 @@
 
 {%block title%} {{auto.nom}} {%endblock%}
 {%block affiche%}
+<div>
 <H1>Le model : {{auto.nom}}</H1>
-    <p> Ce model a été créé par {{auto.marque}}</p>
+    <p> Ce model a été créé par <a href="/relation/view_marque/{{auto.marque.id}}/">{{auto.marque}}</a></p>
     <P> d'orrigine son moteur été capable de déveloper {{auto.puissance}} Cv</P>
+</div>
 {%endblock%}

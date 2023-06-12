@@ -25,3 +25,10 @@ header a{
     padding: 5px;
     border-radius: 25px;
 }
+
+
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

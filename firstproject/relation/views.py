@@ -73,4 +73,5 @@ def view_auto(request, id):
 
 def view_marque(request, id):
     marque = models.marque.objects.get(pk=id)
-    return render(request, "relation/view_marque.html", {'marque':marque})
+    autos = models.auto.objects.filter(marque=marque)
+    return render(request, "relation/view_marque.html", {'marque':marque,'autos':autos})
